@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../src/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <title>CoinStack</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="main">
+        <header>
+            <div class="otherHeaderElement">
+                <button class="headerBtn" id="changeNetwork" title="Change Network"><img src="" alt="" srcset="" class="cryptoLogo">All Networks<i class="fa fa-chevron-down"></i></button>
+                <div class="popup" id="networkOptions">
+                    <div class="networkHeader">
+                        <h2>Choose a network</h2>
+                        <button class="close-btn" id = "hideNetworkList">Close</button>
+                    </div>
+                    <div id="listOfNetworks">
+                        <div class="networkContainer"><button class="allNetworks">All Networks</button></div>
+                        <div class="enabledNetworks">
+                            <h3>Enabled Networks</h3>
+                            <div class="networkContainer" id="amoy"><img class="cryptoLogo" src="../src/amoy.png" alt="" srcset=""><button class="displayNetworkBtn" id="amoy">Amoy</button></div>
+                        </div>
+                        <div class="availableNetworks">
+                            <h3>Add a new network</h3>
+                            <div class="networkContainer" id="arbitrumOne"><img class="cryptoLogo" src="../src/arbitrumOne.png" alt="" srcset=""><span>Arbitrum One</span><button class="addNetworkBtn" id="arbitrumOne">+Add</button></div>
+                            <div class="networkContainer" id="avalanche"><img class="cryptoLogo" src="../src/avalanche.png" alt="" srcset=""><span>Avalanche C-Chain</span><button class="addNetworkBtn" id="avalanche">+Add</button></div>
+                            <div class="networkContainer" id="base"><img class="cryptoLogo" src="../src/base.png" alt="" srcset=""><span>Base Mainnet</span><button class="addNetworkBtn" id="base">+Add</button></div>
+                            <div class="networkContainer" id="bitcoin"><img class="cryptoLogo" src="../src/bitcoin.png" alt="" srcset=""><span>Bitcoin Network</span><button class="addNetworkBtn" id="bitcoin">+Add</button></div>
+                            <div class="networkContainer" id="donatuz"><img class="cryptoLogo" src="../src/donatuz.png" alt="" srcset=""><span>Donatuz</span><button class="addNetworkBtn" id="donatuz">+Add</button></div>
+                            <div class="networkContainer" id="ethereum"><img class="cryptoLogo" src="../src/ethereum.png" alt="" srcset=""><span>Ethereum Mainnet</span><button class="addNetworkBtn" id="ethereum">+Add</button></div>
+                            <div class="networkContainer" id="flare"><img class="cryptoLogo" src="../src/flare.png" alt="" srcset=""><span>Flare Mainnet</span><button class="addNetworkBtn" id="flare">+Add</button></div>
+                            <div class="networkContainer" id="fraxtal"><img class="cryptoLogo" src="../src/fraxtal.png" alt="" srcset=""><span>Fraxtal</span><button class="addNetworkBtn" id="fraxtal">+Add</button></div>
+                            <div class="networkContainer" id="linea"><img class="cryptoLogo" src="../src/linea.png" alt="" srcset=""><span>Linea Mainnet</span><button class="addNetworkBtn" id="linea">+Add</button></div>
+                            <div class="networkContainer" id="lisk"><img class="cryptoLogo" src="../src/lisk.png" alt="" srcset=""><span>Lisk</span><button class="addNetworkBtn" id="lisk">+Add</button></div>
+                            <div class="networkContainer" id="lumia"><img class="cryptoLogo" src="../src/lumia.png" alt="" srcset=""><span>Lumia Prism</span><button class="addNetworkBtn" id="lumia">+Add</button></div>
+                            <div class="networkContainer" id="metis"><img class="cryptoLogo" src="../src/metis.png" alt="" srcset=""><span>Metis Andromeda Mainnet</span><button class="addNetworkBtn" id="metis">+Add</button></div>
+                            <div class="networkContainer" id="op"><img class="cryptoLogo" src="../src/op.png" alt="" srcset=""><span>OP Mainnet</span><button class="addNetworkBtn" id="op">+Add</button></div>
+                            <div class="networkContainer" id="polygonMain"><img class="cryptoLogo" src="../src/polygonMain.png" alt="" srcset=""><span>Polygon Mainnet</span><button class="addNetworkBtn" id="polygonMain">+Add</button></div>
+                            <div class="networkContainer" id="polygonZK"><img class="cryptoLogo" src="../src/polygonZK.png" alt="" srcset=""><span>Polygon zkEVM</span><button class="addNetworkBtn" id="polygonZK">+Add</button></div>
+                            <div class="networkContainer" id="rootstock"><img class="cryptoLogo" src="../src/rootstock.png" alt="" srcset=""><span>Rootstock Mainnet</span><button class="addNetworkBtn" id="rootstock">+Add</button></div>
+                            <div class="networkContainer" id="superposition"><img class="cryptoLogo" src="../src/superposition.png" alt="" srcset=""><span>Superposition</span><button class="addNetworkBtn" id="superposition">+Add</button></div>
+                            <div class="networkContainer" id="vanar"><img class="cryptoLogo" src="../src/vanar.png" alt="" srcset=""><span>Vanar Mainnet</span><button class="addNetworkBtn" id="vanar">+Add</button></div>
+                            <div class="networkContainer" id="xai"><img class="cryptoLogo" src="../src/xai.png" alt="" srcset=""><span>Xai Mainnet</span><button class="addNetworkBtn" id="xai">+Add</button></div>
+                            <div class="networkContainer" id="zksync"><img class="cryptoLogo" src="../src/zksync.png" alt="" srcset=""><span>zkSync Mainnet</span><button class="addNetworkBtn" id="zksync">+Add</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p><img src="../src/logo.png" alt="" srcset="" id="headerLogo">COINSTACK</p>
+            <div class="otherHeaderElement">
+                <button class="headerBtn" id="otherOptions" title="Other Options"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                <ul>
+                    <li>
+                        <button id="showChangeName">Change Name</button>
+                    </li>
+                    <li><button onclick="window.location.href = './mnemonicCheck.html'">Change Password</button></li>
+                    <li>
+                        <button id="showPrivateKey">Show Private Key</button>
+                    </li>
+                    <li>
+                        <button id = "logout">Log Out</button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="dataWrapper" id="topData">
+            <div class="topInfo" id="infoBar">
+                <p id="userName"></p>                
+            </div>
+            <div class="topInfo" id="balanceWrapper">
+                <h1 id="balance">₹ </h1>
+                <div id="txbuttons">
+                    <button class="txbtn" id="sendButton">Send</button>
+                    <div class="popup" id="sendingWrapper">
+                        <h1>Send Tokens</h1>
+                        <form id="sendTokens">
+                            <label>To : </label>
+                            <input placeholder="Enter receiver's address..." name = "address">
+                            <label>Amount : </label>
+                            <input placeholder="Enter number of tokens..." name = "amt">
+                            <button type="submit">Submit</button>
+                        </form>
+                        <button id="closeSendingDetails">Close</button>
+                    </div>
+                    <button class="txbtn" id="receiveButton" title="Send Tokens">Receive</button>
+                    <div class="popup" id="receivingDetailsWrapper">
+                        <h1>Receive Tokens</h1>
+                        <div id="qrcode"></div>
+                        <button id="userAddress" title="Copy Address"></button>
+                        <button class="close-btn" id="closeReceivingDetails">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dataWrapper" id="mainInfoTitle">
+            <div class="mainInfo" id="balancePerCoin">
+                <p>Balance Per Network</p>
+            </div>
+            <div class="mainInfo" id="allTx">
+                <p>Transaction History</p>
+            </div>
+        </div>
+        <div class="dataWrapper" id="tokenEventsWrapper">
+            <div class="allNetworksContainer" id="allNetworksLeft"></div>
+            <div id="seperator"></div>
+            <div class="allNetworksContainer" id="allNetworksRight">
+                <p class="noTx" style="padding-top: 12px;">You have no transactions</p><p class="noTx">Select a network to do transactions</p>
+            </div>
+        </div>
+        <div id="livePriceTicker">
+            <h1></h1>
+            <p></p>
+            <h6></h6>
+        </div>
+    </div>
+    <div class="popup" id="changeName">
+        <h1>Change Name</h1>
+        <input type="text" placeholder="Please enter your new name...">
+        <button id="hideChangeName">Done</button>
+    </div>
+    <div class="popup" id="privateKey">
+        <p id = "warning">Do Not Share Your Private Key</p>
+        <p id="privateKeyHex"></p>
+        <button id="hidePrivateKey">Close</button>
+    </div>
+    <div class="visible"></div>
+    <script src="./bundle.js"></script>
+</body>
+</html>

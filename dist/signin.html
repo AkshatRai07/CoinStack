@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../src/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign-In</title>
+</head>
+<body>
+    <div class="authContainer">
+        <div class="imgWrapper">
+            <img src="../src/logo.png" alt="" srcset="">
+            <form class="authWrapper" id="signinForm">
+                <label>Name </label>
+                <input type="text" name="name" placeholder="what should we call you...">
+                <label>E-Mail ID</label>
+                <input type="text" name="email" placeholder="enter your email-id...">
+                <label>Set Password </label>
+                <input type="text" name="password" placeholder="enter a secure password...">
+                <button id="privacyView">Show Password</button>
+                <button class="authContinue" id="signinContinue" >Continue</button>
+                <p class="authError" id = "signinError"></p>
+            </form>
+        </div>
+    </div>
+    <script src="./bundle.js"></script>
+</body>
+</html>

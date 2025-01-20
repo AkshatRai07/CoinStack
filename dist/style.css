@@ -1,0 +1,819 @@
+/* -------------------General--------------------------- */
+p {
+    margin: 0px;
+}
+
+body {
+    background-image: url('https://i.makeagif.com/media/12-04-2018/IxHq7M.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    color: #ffffff;
+    font-family: Euclid Circular B, sans-serif;
+    background-blend-mode: multiply;
+    height: auto;
+}
+
+/* -------------------Homepage-------------------------- */
+
+.homepageContainer, .homepageContainer * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcomeHomepage{
+    background-color: rgba(49, 49, 65,0.5);
+    border: rgb(255, 215, 0) 2px;
+    border-style: solid none;
+    width: 100%;
+}
+
+#welcomeHomepage h1{
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+#features{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.feature{
+    width: 25%;
+    border: rgb(255, 215, 0) solid 2px;
+    background-color: #212131;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 0px 0px 15px #000000;
+    height: 175px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.feature:hover{
+    transform: scale(0.97);
+}
+
+#aboutHomepage h2{
+    font-size: 30px;
+    margin: 20px 0px 15px 0px;
+}
+
+#aboutHomepage p{
+    font-size: 20px;
+    margin-bottom: 35px;
+    width: 80%;
+    text-align: center;
+}
+
+#getStarted{
+    margin-bottom: 40px;
+}
+
+#getStarted h1{
+    margin: 30px 0px 15px 0px;
+}
+
+#getStarted button{
+    border: none;
+    border-radius: 50px;
+    background-color: #5588e7;
+    color: #ffffff;
+    padding: 10px 80px;
+    font-size: 25px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: transform 0.1s ease-in-out;
+}
+
+#getStarted button:hover{
+    transform: scale(1.05);
+}
+
+#faq{
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: #313141;
+    color: #eeeeee;
+}
+
+#faq :is(h2, h4, p){
+    display: block;
+    margin-right: auto;
+}
+
+#faq h2{
+    margin: 0px;
+    font-size: 40px;
+}
+
+#faq h4{
+    margin-bottom: 5px;
+    font-size: 20px; 
+}
+
+/* --------------------Sign in / Log in--------------------- */
+.authContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.authContainer input::placeholder{
+    color: #bdbdbd;
+}
+
+.authContainer input:hover::placeholder{
+    text-decoration: underline;
+}
+
+.authContainer input {
+    border: none;
+    display: block;
+    border: #616161;
+    color: #ffffff;
+    background-color: transparent;
+    width: 250px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+.imgWrapper {
+    display: flex;
+    align-items: stretch;
+    padding: 3vh;
+    border: #bdbdbd solid;
+    border-radius: 3vh;
+    background-color: #212131;
+    border: rgb(255, 215, 0) solid 2px;
+}
+
+.authWrapper {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    width: 270px;
+}
+
+img {
+    width: auto;
+    height: 280px;
+    object-fit: cover;
+    padding: 0vh 3vh 0vh 0vh;
+}
+
+.authContinue {
+    margin: 0px;
+    padding: 5px 0px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    border: none;
+    background-color: #5588e7;
+    color: #ffffff;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.authContinue:hover {
+    background-color: #2167e9;
+}
+
+#changePass {
+    margin-top: 15px;
+}
+
+#changePassLink {
+    color: #ffffff;
+}
+
+#changePassLink:hover {
+    color:rgb(51, 199, 248);
+}
+
+.authError {
+    color: rgb(255, 138, 158);
+    margin-top: 10px;
+}
+
+#privacyView {
+    background-color: transparent;
+    color: #bdbdbd;
+    cursor: pointer;
+    border: none;
+    padding: 0px 0px 0px 10px;
+    margin-bottom: 22px;
+    font-size: 16px;
+    text-align: left;
+    margin-top: -10px;
+}
+
+/* -------------Mnemonic----------------- */
+.mnemonicMain, .mnemonicCheckMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0px;
+}
+
+.mnemonicWrapper{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.mnemonicWord{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: rgb(255, 215, 0) 2px solid;
+    border-radius: 25px;
+    background-color: #313141;
+    width: 250px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.mnemonicMain button, #mnemonicCheckContinue{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 25px;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.mnemonicMain button:hover, #mnemonicCheckContinue:hover{
+    text-decoration: underline;
+}
+
+#mnemonicCheckContinue{
+    margin-left: 60.5vh;
+}
+
+.mnemonicWrapper input{
+    text-align: center;
+    color: #ffffff;
+
+}
+
+/* --------------Frontpage--------------- */
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header p{
+    font-size: 50px;
+    margin-top: 60px;
+    margin-bottom: 56px;
+}
+
+#headerLogo {
+    height: 50px;
+    padding: 0px 10px 0px 0px;
+    margin-bottom: -6px;
+}
+
+.otherHeaderElement{
+    width: 229px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#changeNetwork{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: auto;
+    max-width: 210px;
+}
+
+#changeNetwork img{
+    margin: 0px;
+    padding: 0px;
+}
+
+#changeNetwork i{
+    margin-left: 5px;
+}
+
+.headerBtn {
+    border: rgb(255, 215, 0) 1px solid;
+    color: #ffffff;
+    background-color: #111121;
+    width: auto;
+    padding: 9px 27px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#otherOptions{
+    position: relative;
+    top: 71px;
+    left: 156px;
+    padding: 9px 17px;
+    margin-left: auto;
+}
+
+.otherHeaderElement ul{
+    position: relative;
+    top: 110px;
+    left: 1px;
+    z-index: 98;
+    list-style-type: none;
+    margin: 0px;
+    padding: 10px;
+    border: rgb(255, 215, 0) 2px solid;
+    border-radius: 20px;
+    background-color: #111121;
+    scale: 0;
+}
+
+.otherHeaderElement ul li button{
+    color: #ffffff;
+    background-color: #111121;
+    font-size: 16px;
+    border: none;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.otherHeaderElement ul li button:hover{
+    text-decoration: underline;
+}
+
+.dataWrapper{
+    display: flex;
+    align-items: center;
+    background-color: #313141;
+    width: 800px;
+    padding: 20px 0px;
+    border: rgb(255, 215, 0) 2px solid;
+    border-top: none;
+}
+
+#topData{
+    border-top: rgb(255, 215, 0) 2px solid;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.topInfo{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerBtn:hover{
+    background-color: #202030;
+}
+
+.midelement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#userName {
+    display: inline;
+    font-size: 30px;
+}
+
+.popup {
+    background-color: #313141;
+    color: #ffffff;
+    border: rgb(255, 215, 0) 2px solid;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s, visibility 0.2s;
+    z-index: 100;
+}
+
+.showDetails {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: visible;
+}
+
+#qrcode img{
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    margin-bottom: 10px;
+}
+
+#receivingDetailsWrapper{
+    padding: 16px;
+    border-radius: 10px;
+}
+
+#receivingDetailsWrapper button{
+    padding: 5px 40px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #bdbdbd;
+}
+
+#receivingDetailsWrapper button:hover {
+    background-color: #404050;
+}
+
+#receivingDetailsWrapper #userAddress {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 5px 0px;
+    color: #ffffff;
+}
+
+#receivingDetailsWrapper #userAddress:hover{
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#closeReceivingDetails { /* Close button only*/
+    margin-bottom: 5px;
+}
+
+#balance{
+    margin: 0px;
+}
+
+#txbuttons{
+    display: flex;
+}
+
+#txbuttons button{
+    background-color: transparent;
+    color: #bdbdbd;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+}
+
+#txbuttons button:hover{
+    text-decoration: underline;
+}
+
+#networkOptions{
+    max-height: 512px;
+}
+
+#listOfNetworks{
+    max-height: 453px;
+    width: 400px;
+    overflow-y: auto;
+}
+
+#mainInfoTitle{
+    padding: 0px;
+}
+
+.mainInfo{
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#balancePerCoin{
+    border-right: rgb(255, 215, 0) 2px solid;
+}
+
+.networkContainer{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 10px;
+}
+
+.networkContainer span{
+    padding: 10px;
+}
+
+.networkContainer button{
+    margin-left: auto;
+    padding: 0px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.networkContainer button:hover{
+    text-decoration: underline;
+    color: rgb(106, 201, 233);
+}
+
+.networkHeader{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: rgb(255, 215, 0) 2px solid;
+    box-shadow: 0px 5px 5px #000000;
+}
+
+.networkHeader button{
+    padding: 5px 5px;
+    background-color: transparent;
+    border: none;
+    color: #bdbdbd;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.networkHeader button:hover{
+    text-decoration: underline;
+}
+
+h3 {
+    margin: 20px 10px;
+}
+
+.networkContainer .allNetworks {
+    margin-left: 50px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.allNetworks:hover{
+    text-decoration: underline;
+    color: rgb(106, 201, 233);
+}
+
+.networkContainer .displayNetworkBtn{
+    padding: 10px;
+    margin: 0px;
+}
+
+.cryptoLogo{
+    height: 40px;
+    margin-left: 10px;
+}
+
+.allNetworksContainer{
+    height: auto;
+    width: 400px;
+}
+
+.coinInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 20px 20px 0px;
+}
+
+#tokenEventsWrapper{
+    position: relative;
+    padding: 0px;
+    border-radius: 0px 0px 25px 25px;
+    margin-bottom: 50px;
+}
+
+#seperator{
+    width: 2px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 215, 0);
+}
+
+#allNetworksLeft{
+    margin-bottom: auto;
+}
+
+#allNetworksRight{
+    padding: 8px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+#txbuttons #receivingDetailsWrapper button{
+    width: 250px;
+}
+
+#sendingWrapper{
+    border-radius: 25px;
+    padding: 20px;
+}
+
+#sendingWrapper form input{
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    width: 400px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+}
+
+#sendingWrapper form label{
+    display: block;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+#sendingWrapper form input::placeholder{
+    color: #bdbdbd;
+}
+
+#sendingWrapper form input:hover::placeholder{
+    text-decoration: underline;
+}
+
+#sendingWrapper form button{
+    padding: 5px 0px;
+    color: #ffffff;
+    background-color: #5588e7;
+    width: 400px;
+    border-radius: 100px;
+    font-size: 16px;
+    margin: 10px 0px;
+}
+
+#sendingWrapper form button:hover{
+    background-color: #2167e9;
+    text-decoration: none;
+}
+
+#livePriceTicker{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#changeName{
+    height: 300px;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#changeName input{
+    width: 400px;
+    text-align: center;
+    border: none;
+    padding: 10px 0px;
+    font-size: 20px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#changeName input::placeholder{
+    color: #bdbdbd;
+}
+
+#changeName h1{
+    margin: 0px;
+}
+
+#changeName button{
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#changeName button:hover{
+    text-decoration: underline;
+}
+
+#privateKey{
+    border-radius: 25px;
+    padding: 10px;
+}
+
+#privateKey #privateKeyHex{
+    max-width: 350px;
+    word-wrap: break-word;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+#privateKey #warning{
+    font-size: 20px;
+    padding: 10px 0px 10px 0px;
+    font-weight: 700;
+}
+
+#privateKey button{
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#privateKey button:hover{
+    text-decoration: underline;
+}
+
+.transaction{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.nameWrapper{
+    margin-left: 16px;
+}
+
+.nameWrapper .text1, .txWrapper .text2{
+    font-size: 30px;
+}
+
+.nameWrapper .text4, .nameWrapper .text5, .txWrapper .text3{
+    max-width: 200px;
+    word-wrap: break-word;
+    font-size: 13px;
+    padding-top: 3px;
+}
+
+.txWrapper, .priceWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.txWrapper{
+    margin-right: 16px;
+}
+
+#forgotPassBtn{
+    color: #ffffff;
+    text-decoration: underline;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: auto;
+}
+
+#forgotPassBtn:hover{
+    color: #2fb7e5
+}
+
+#changePassForm{
+    margin-top: 15px;
+}
