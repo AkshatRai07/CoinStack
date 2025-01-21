@@ -3131,6 +3131,7 @@ sendTokens.addEventListener('submit', (e) => {
                             addDoc(transactionsRef, txObject)
 
                             text1.textContent = 'Failed'
+                            sendTokens.reset()
                         }
                     })
                     .catch((err) => {
